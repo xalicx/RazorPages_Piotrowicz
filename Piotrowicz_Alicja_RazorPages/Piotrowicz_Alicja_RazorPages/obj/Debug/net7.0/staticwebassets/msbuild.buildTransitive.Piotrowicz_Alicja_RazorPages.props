@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Piotrowicz_Alicja_RazorPages.props" />
+</Project>
