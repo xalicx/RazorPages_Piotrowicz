@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Piotrowicz_Alicja_RazorPages.Data;
 using Piotrowicz_Alicja_RazorPages.Models;
@@ -21,12 +22,25 @@ namespace Piotrowicz_Alicja_RazorPages.Pages.Treningi
 
         public IList<Trening> Trening { get;set; } = default!;
 
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+
+        public SelectList? Type { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? TreningType { get; set; }
+
         public async Task OnGetAsync()
         {
-            if (_context.Trening != null)
+            var trening = from m in _context.Trening
+                          select m;
+            if (!string.IsNullOrEmpty(SearchString))
             {
-                Trening = await _context.Trening.ToListAsync();
+                trening = trening.Where(s => s.Type.Contains(SearchString));
             }
+
+                Trening = await trening.ToListAsync();
+            
         }
     }
 }
