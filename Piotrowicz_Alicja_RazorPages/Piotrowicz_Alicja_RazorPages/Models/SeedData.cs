@@ -28,7 +28,7 @@ namespace Piotrowicz_Alicja_RazorPages.Models
                     {
                         Type = "Air Yoga",
                         WeekDay = "Poniedziałek",
-                        DateStart = DateTime.Parse("13:30"),
+                        DateStart = DateTime.Parse("3:30"),
                         Duration = 90,
                         Price = 60
                     },
@@ -37,7 +37,7 @@ namespace Piotrowicz_Alicja_RazorPages.Models
                     {
                         Type = "Hataha Yoga",
                         WeekDay = "Wtorek",
-                        DateStart = DateTime.Parse("18:30"),
+                        DateStart = DateTime.Parse("8:30"),
                         Duration = 90,
                         Price = 60
                     },
@@ -46,7 +46,7 @@ namespace Piotrowicz_Alicja_RazorPages.Models
                     {
                         Type = "Yoga IYENGARA",
                         WeekDay = "Wtorek",
-                        DateStart = DateTime.Parse("8:30"),
+                        DateStart = DateTime.Parse("6:30"),
                         Duration = 90,
                         Price = 30
                     },
@@ -55,7 +55,7 @@ namespace Piotrowicz_Alicja_RazorPages.Models
                     {
                         Type = "Yoga Vinjasa",
                         WeekDay = "Piątek",
-                        DateStart = DateTime.Parse("20:30"),
+                        DateStart = DateTime.Parse("6:30"),
                         Duration = 90,
                         Price = 60
                     }

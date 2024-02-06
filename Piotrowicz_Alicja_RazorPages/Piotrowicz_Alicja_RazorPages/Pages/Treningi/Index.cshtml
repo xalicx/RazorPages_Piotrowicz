@@ -26,6 +26,9 @@
                 @Html.DisplayNameFor(model => model.Trening[0].Duration)
             </th>
             <th>
+                End time
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Trening[0].Price)
             </th>
             <th></th>
@@ -47,12 +50,16 @@
                 @Html.DisplayFor(modelItem => item.Duration)
             </td>
             <td>
+                @item.DateStop()
+            </td>
+
+            <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edytuj</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Delete" asp-route-id="@item.Id">usuń</a>
             </td>
         </tr>
 }
